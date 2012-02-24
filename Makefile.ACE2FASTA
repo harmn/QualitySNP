@@ -1,0 +1,22 @@
+CC=g++
+RM=rm -rvf
+CFLAGS=-c -Wall -O3
+LDFLAGS=
+INCLUDES=
+LIBRARIES=
+SOURCES=ACE2FASTA.cpp ACEFile.cpp Configuration.cpp Contig.cpp ContigPrinter.cpp CSVWriter.cpp HaploType.cpp Logger.cpp SAMFile.cpp SeqRead.cpp Variation.cpp
+OBJECTS=$(SOURCES:.cpp=.o)
+EXECUTABLE=ACE2FASTA
+
+all: $(SOURCES) $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(INCLUDES) $(LDFLAGS) $(OBJECTS) -o $@ $(LIBRARIES)
+
+.cpp.o:
+	$(CC) $(CFLAGS) $< -o $@
+
+clean:
+	$(RM) $(OBJECTS) $(EXECUTABLE)
+
+

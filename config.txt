@@ -1,0 +1,27 @@
+# example configuration file for QualitySNP
+minimalNumberOfAlleles = 2
+lowQualityRegion5prime = 0
+lowQualityRegion3prime = 0
+lowQualityRegion3primePerc = 0.0
+weightHighQualityRegion = 1.0
+weightLowQualityRegion = 0.5
+minSNPQualityScore	= 20
+minimalConfidenceScore = 2
+minNumberOfHighQualityReads = 2
+logLevel = 2
+similarityPerPolymorphicSite = 0.75
+similarityAllPolymorphicSites = 0.8
+OutputDirectory	= "/tmp"
+LogFileName		= "QSNP.log"
+ContigsFile	= "contigs.csv"
+ReadsFile		= "reads.csv"
+HaploTypesFile = "haplotypes.csv"
+VariationsFile = "variations.csv"
+
+fieldSeparator	= '\t'
+indelLowQuality	= true
+printAlignment	= false
+printHaploTypes	= false
+printSNPs		= false
+printMarkers		= false
+printSummaryLine	= true
